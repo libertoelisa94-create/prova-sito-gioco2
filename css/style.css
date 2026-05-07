@@ -56,7 +56,7 @@ body {
 
 .hero {
     position: relative;
-    height: 60vh; /* Altezza della sezione */
+    height: 60vh; 
     width: 100%;
     overflow: hidden;
     display: flex;
@@ -72,7 +72,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Mantiene le proporzioni coprendo l'area */
+    object-fit: cover; 
     z-index: 1;
 }
 
@@ -82,14 +82,14 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: var(--sesto); /* Scurisce l'immagine del 30% */
+    background: var(--sesto); 
     z-index: 2;
     opacity: 40%;
 }
 
 .hero-content {
     position: relative;
-    z-index: 3; /* Sopra immagine e overlay */
+    z-index: 3; 
 }
 
 .hero-content p {
@@ -102,13 +102,13 @@ body {
 }
 
 .hero-content h1 {
-    font-family: var(--font-title); /* Il tuo font specifico */
+    font-family: var(--font-title); 
     font-size: 4rem;
     margin: 0;
-    text-shadow: 2px 2px 10px rgba(0,0,0,0.5); /* Ombra per staccare il testo */
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.5); 
 }
 
-/* INTRO */
+
 .container {
     max-width: 1100px;
     margin: 0 auto;
@@ -135,10 +135,9 @@ body {
     font-family: var(--font-base);
 }
 
-/* Layout della Griglia */
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 colonne su desktop */
+    grid-template-columns: repeat(3, 1fr); 
     gap: 30px;
     max-width: 1200px;
     margin: 50px auto;
@@ -146,9 +145,9 @@ body {
     margin-top: 100px;
 }
 
-/* Stile della Card */
+
 .card {
-    background-color: var(--primario); /* Colore crema chiaro dello sfondo card */
+    background-color: var(--primario); 
     border-radius: 20px;
     overflow: hidden;
     display: flex;
@@ -172,7 +171,7 @@ body {
     object-fit: cover;
 }
 
-/* Badge colorati sotto l'immagine */
+
 .badge {
     position: absolute;
     bottom: 0;
@@ -190,7 +189,7 @@ body {
 .badge.orange { background-color: var(--terziario); }
 .badge.yellow { background-color: var(--terziario); }
 
-/* Corpo della card */
+
 .card-body {
     padding: 25px;
     text-align: center;
@@ -201,8 +200,8 @@ body {
 }
 
 .card-body h3 {
-    font-family: var(--font-title); /* Fredoka */
-    color: var(--quinto); /* Viola scuro per i titoli card */
+    font-family: var(--font-title); 
+    color: var(--quinto); 
     font-size: 1.3rem;
     margin-bottom: 15px;
     line-height: 1.2;
@@ -210,7 +209,7 @@ body {
 }
 
 .card-body p {
-    font-family: var(--font-base); /* Quicksand */
+    font-family: var(--font-base); 
     font-size: 0.95rem;
     color: var(--quinto);
     margin-bottom: 20px;
@@ -218,7 +217,7 @@ body {
     text-align: left;
 }
 
-/* Bottone Vai */
+
 .btn-vai {
     display: inline-block;
     align-self: center;
@@ -239,7 +238,7 @@ body {
 
 .did-you-know-box {
     background-color: rgba(232, 227, 255, 0.6); 
-    border-radius: 40px;       /* Bordi ancora più morbidi come in foto */
+    border-radius: 40px;       
     padding: 60px 20px;
     text-align: center;
     display: flex;
@@ -259,7 +258,7 @@ body {
 
 .did-you-know-box p {
     font-family: var(--font-base);
-    color: var(--text); /* Un viola scuro per il testo lo rende più leggibile sul chiaro */
+    color: var(--text); 
     font-size: 1.3rem;
     max-width: 700px;
     line-height: 1.4;
@@ -267,7 +266,6 @@ body {
 
 .btn-scopri {
     display: inline-block;
-    /* Anche il bottone segue la logica della trasparenza */
     background-color: var(--sesto); 
     color: white;
     text-decoration: none;
@@ -342,19 +340,19 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: var(--terziario); /* Scurisce l'immagine del 30% */
+    background: var(--terziario); 
     z-index: 2;
     opacity: 40%;
 }
 
-/* REGOLE DI COERENZA (Se non già presenti) */
+
 .container {
     max-width: 1100px;
     margin: 0 auto;
     padding: 60px 20px;
 }
 
-/* INTRODUZIONE "PICCOLE PILLOLE" */
+
 .intro-header {
     display: flex;
     justify-content: space-between;
@@ -378,9 +376,9 @@ body {
     font-size: 1rem;
 }
 
-/* BOX NAVIGAZIONE PILLOLE */
+
 .pill-navigation {
-    background-color: var(--primario); /* Sfondo crema del box pillole */
+    background-color: var(--primario); 
     border-radius: 20px;
     padding: 40px;
     margin-bottom: 100px;
@@ -413,17 +411,17 @@ a.pill {
     color: var(--text) !important;
 }
 
-/* Protezione per i link già visitati o cliccati */
+
 a.pill:visited, 
 a.pill:active, 
 a.pill:link {
     color: #000000 !important;
 }
 
-/* GRIGLIA CARD TESTUALI */
+
 .curiosity-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* 2 colonne come in foto */
+    grid-template-columns: repeat(2, 1fr); 
     gap: 40px;
 }
 
@@ -451,7 +449,6 @@ a.pill:link {
     color: var(--text);
 }
 
-/* PALETTE COLORI (Badge e Card) */
 .orange, .bg-orange { background-color: var(--terziario); }
 .blue-dark, .bg-blue-dark { background-color: var(--quinto); color: white !important; }
 .purple, .bg-purple { background-color: var(--sesto); }
@@ -466,12 +463,12 @@ a.pill:link {
     left: 0;
     width: 100%;
     height: 100%;
-    background: var(--terziario); /* Scurisce l'immagine del 30% */
+    background: var(--terziario); 
     z-index: 2;
 }
 .hero-content-periodo {
     position: relative;
-    z-index: 3; /* Sopra immagine e overlay */
+    z-index: 3; 
     color: var(--primario);
 }
 .hero-content-periodo p {
@@ -484,21 +481,21 @@ a.pill:link {
 }
 
 .hero-content-periodo h1 {
-    font-family: var(--font-title); /* Il tuo font specifico */
+    font-family: var(--font-title); 
     font-size: 4rem;
     margin: 0;
-    text-shadow: 2px 2px 10px rgba(0,0,0,0.5); /* Ombra per staccare il testo */
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.5); 
 }
 
 
-/* CONTAINER GENERALE (Coerenza con le altre pagine) */
+
 .container {
-    max-width: 1000px; /* Un po' più stretto per questa sezione testuale */
+    max-width: 1000px; 
     margin: 0 auto;
     padding: 60px 20px;
 }
 
-/* DESCRIZIONE TESTUALE */
+
 .period-description {
     margin-bottom: 80px;
 }
@@ -512,7 +509,7 @@ a.pill:link {
     text-align: left;
     max-width: 750px; 
     
-    /* Allinea il contenitore a sinistra (margin-right: auto spinge lo spazio a destra) */
+   
     margin-left: 0;
     margin-right: auto;
     
@@ -520,10 +517,10 @@ a.pill:link {
     margin-bottom: 80px;
 }
 
-/* TITOLO ARANCIONE */
+
 .grid-title h2 {
     font-family: var(--font-title);
-    color: var(--terziario); /* L'arancione del periodo antico */
+    color: var(--terziario); 
     font-size: 2rem;
     margin-bottom: 40px;
     text-transform: uppercase;
@@ -531,25 +528,25 @@ a.pill:link {
     margin-top: 100px;
 }
 
-/* GRIGLIA PRODOTTI */
+
 .products-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* 2 colonne */
+    grid-template-columns: repeat(2, 1fr); 
     gap: 30px;
 }
 
-/* CARD ORIZZONTALE */
+
 .product-card {
-    display: flex; /* Disposizione orizzontale immagine | testo */
+    display: flex; 
     background-color: var(--primario);
     border-radius: 20px;
     overflow: hidden;
-    height: 180px; /* Altezza fissa per simmetria */
+    height: 180px; 
     box-shadow: 0 4px 10px rgba(0,0,0,0.05);
 }
 
 .product-image {
-    flex: 0 0 40%; /* L'immagine occupa il 40% della larghezza */
+    flex: 0 0 40%; 
 }
 
 .product-image img {
@@ -581,7 +578,7 @@ a.pill:link {
     line-height: 1.3;
 }
 
-/* BOTTONE VAI (Coerenza con card precedenti) */
+
 .btn-vai {
     background-color: var(--terziario);
     color: var(--quinto);
@@ -591,5 +588,5 @@ a.pill:link {
     padding: 6px 30px;
     border-radius: 20px;
     font-size: 0.8rem;
-    align-self: flex-end; /* Allineato a destra in basso */
+    align-self: flex-end; 
 }
