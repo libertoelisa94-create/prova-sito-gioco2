@@ -1,0 +1,595 @@
+:root {
+    --primario: rgba(247, 237, 226, 1);
+    --secondario: rgba(132, 165, 157, 1);
+    --terziario: rgba(246, 189, 96, 1);
+    --quarto: rgba(242, 132, 130, 1);
+    --quinto: rgba(69, 123, 157, 1);
+    --sesto: rgba(189, 178, 255, 1);
+    --settimo: rgba(231, 111, 81, 1);
+    --text: rgba(0, 0, 0, 1);
+    --sfondo: rgba(255, 255, 255, 1);
+
+    --font-title: 'Fredoka', sans-serif;
+    --font-base: 'Quicksand', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-base);
+    background-color: var(--sfondo);
+    color: var(--text);
+    line-height: 1.4;
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+}
+
+.logo img, .footer-logo img {
+    height: 50px;
+    width: auto;
+    display: block;
+    height: 35px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+    align-items: center;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--quinto);
+    font-weight: bold;
+    font-size: 1.1rem;
+    font-family: var(--font-base);
+}
+
+.hero {
+    position: relative;
+    height: 60vh; /* Altezza della sezione */
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+.hero-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Mantiene le proporzioni coprendo l'area */
+    z-index: 1;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--sesto); /* Scurisce l'immagine del 30% */
+    z-index: 2;
+    opacity: 40%;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 3; /* Sopra immagine e overlay */
+}
+
+.hero-content p {
+    font-size: 1.8rem;
+    text-transform: none;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+    font-family: var(--font-title);
+    font-weight: 600;
+}
+
+.hero-content h1 {
+    font-family: var(--font-title); /* Il tuo font specifico */
+    font-size: 4rem;
+    margin: 0;
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.5); /* Ombra per staccare il testo */
+}
+
+/* INTRO */
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.intro-text {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.intro-text h2 {
+    color: var(--sesto);
+    font-family: var(--font-title);
+    font-size: 2.8rem;
+}
+.subtitle {
+    font-family: var(--font-title);
+    color: var(--sesto);
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+}
+.description {
+    font-family: var(--font-base);
+}
+
+/* Layout della Griglia */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 colonne su desktop */
+    gap: 30px;
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 0 20px;
+    margin-top: 100px;
+}
+
+/* Stile della Card */
+.card {
+    background-color: var(--primario); /* Colore crema chiaro dello sfondo card */
+    border-radius: 20px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card-header {
+    position: relative;
+    height: 200px;
+}
+
+.card-header img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Badge colorati sotto l'immagine */
+.badge {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 8px;
+    text-align: center;
+    font-family: var(--font-base);
+    font-weight: 700;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    color: #555;
+}
+
+.badge.orange { background-color: var(--terziario); }
+.badge.yellow { background-color: var(--terziario); }
+
+/* Corpo della card */
+.card-body {
+    padding: 25px;
+    text-align: center;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card-body h3 {
+    font-family: var(--font-title); /* Fredoka */
+    color: var(--quinto); /* Viola scuro per i titoli card */
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    line-height: 1.2;
+    text-align: left;
+}
+
+.card-body p {
+    font-family: var(--font-base); /* Quicksand */
+    font-size: 0.95rem;
+    color: var(--quinto);
+    margin-bottom: 20px;
+    line-height: 1.5;
+    text-align: left;
+}
+
+/* Bottone Vai */
+.btn-vai {
+    display: inline-block;
+    align-self: center;
+    background-color: var(--terziario);
+    color: var(--quinto);
+    text-decoration: none;
+    font-family: var(--font-base);
+    font-weight: 700;
+    padding: 8px 35px;
+    border-radius: 25px;
+    font-size: 0.9rem;
+    transition: background 0.3s;
+}
+
+.btn-vai:hover {
+    background-color: var(--terziario);
+}
+
+.did-you-know-box {
+    background-color: rgba(232, 227, 255, 0.6); 
+    border-radius: 40px;       /* Bordi ancora più morbidi come in foto */
+    padding: 60px 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    margin-top: 100px;
+}
+
+.did-you-know-box h3 {
+    font-family: var(--font-title);
+    color: var(--sesto);
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.did-you-know-box p {
+    font-family: var(--font-base);
+    color: var(--text); /* Un viola scuro per il testo lo rende più leggibile sul chiaro */
+    font-size: 1.3rem;
+    max-width: 700px;
+    line-height: 1.4;
+}
+
+.btn-scopri {
+    display: inline-block;
+    /* Anche il bottone segue la logica della trasparenza */
+    background-color: var(--sesto); 
+    color: white;
+    text-decoration: none;
+    font-family: var(--font-title);
+    font-weight: 400;
+    padding: 10px 35px;
+    border-radius: 15px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.btn-scopri:hover {
+    background-color: var(--sesto);
+    transform: scale(1.05);
+}
+
+.footer {
+    padding: 60px 10% 20px 10%;
+    border-top: 1px solid #eee;
+}
+
+.footer-main {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 50px;
+    margin-top: 100px;
+}
+
+.footer-logo {
+    font-family: var(--font-title);
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.footer-column h3 {
+    color: var(--quinto);
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+    font-family: var(--font-base);
+}
+
+.footer-column a, .footer-column p {
+    display: block;
+    color: var(--quinto);
+    text-decoration: none;
+    margin-bottom: 8px;
+    opacity: 0.7;
+    font-family: var(--font-base);
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #f5f5f5;
+}
+
+.footer-bottom a {
+    color: var(--quinto);
+    text-decoration: none;
+    font-size: 0.85rem;
+    opacity: 0.6;
+    font-family: var(--font-base);
+}
+
+.hero-overlay-c {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--terziario); /* Scurisce l'immagine del 30% */
+    z-index: 2;
+    opacity: 40%;
+}
+
+/* REGOLE DI COERENZA (Se non già presenti) */
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 60px 20px;
+}
+
+/* INTRODUZIONE "PICCOLE PILLOLE" */
+.intro-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+    margin-bottom: 50px;
+}
+
+.intro-header h2 {
+    font-family: var(--font-title);
+    color: var(--terziario);
+    font-size: 2.2rem;
+    flex: 1;
+    line-height: 1.1;
+}
+
+.intro-desc {
+    flex: 1;
+    font-family: var(--font-base);
+    color: var(--text);
+    font-size: 1rem;
+}
+
+/* BOX NAVIGAZIONE PILLOLE */
+.pill-navigation {
+    background-color: var(--primario); /* Sfondo crema del box pillole */
+    border-radius: 20px;
+    padding: 40px;
+    margin-bottom: 100px;
+    margin-top: 100px;
+}
+
+.pill-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+.pill {
+    padding: 10px 25px;
+    border-radius: 30px;
+    text-decoration: none;
+    color: var(--text);
+    font-family: var(--font-title);
+    font-weight: 700;
+    font-size: 0.85rem;
+    text-align: center;
+    transition: transform 0.2s;
+}
+
+.pill:hover { transform: scale(1.05); }
+
+
+a.pill {
+    color: var(--text) !important;
+}
+
+/* Protezione per i link già visitati o cliccati */
+a.pill:visited, 
+a.pill:active, 
+a.pill:link {
+    color: #000000 !important;
+}
+
+/* GRIGLIA CARD TESTUALI */
+.curiosity-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 colonne come in foto */
+    gap: 40px;
+}
+
+.curiosity-card {
+    padding: 40px;
+    border-radius: 20px;
+    text-align: center;
+    min-height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.curiosity-card h3 {
+    font-family: var(--font-title);
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: var(--text);
+}
+
+.curiosity-card p {
+    font-family: var(--font-base);
+    font-size: 1rem;
+    line-height: 1.5;
+    color: var(--text);
+}
+
+/* PALETTE COLORI (Badge e Card) */
+.orange, .bg-orange { background-color: var(--terziario); }
+.blue-dark, .bg-blue-dark { background-color: var(--quinto); color: white !important; }
+.purple, .bg-purple { background-color: var(--sesto); }
+.pink, .bg-pink { background-color: var(--quarto); }
+.green, .bg-green { background-color: var(--secondario); }
+.red, .bg-red { background-color: var(--settimo); }
+
+
+.hero-overlay-p {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--terziario); /* Scurisce l'immagine del 30% */
+    z-index: 2;
+}
+.hero-content-periodo {
+    position: relative;
+    z-index: 3; /* Sopra immagine e overlay */
+    color: var(--primario);
+}
+.hero-content-periodo p {
+    font-size: 1.8rem;
+    text-transform: none;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+    font-family: var(--font-title);
+    font-weight: 600;
+}
+
+.hero-content-periodo h1 {
+    font-family: var(--font-title); /* Il tuo font specifico */
+    font-size: 4rem;
+    margin: 0;
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.5); /* Ombra per staccare il testo */
+}
+
+
+/* CONTAINER GENERALE (Coerenza con le altre pagine) */
+.container {
+    max-width: 1000px; /* Un po' più stretto per questa sezione testuale */
+    margin: 0 auto;
+    padding: 60px 20px;
+}
+
+/* DESCRIZIONE TESTUALE */
+.period-description {
+    margin-bottom: 80px;
+}
+
+.period-description p {
+    font-family: var(--font-base);
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: var(--text);
+    margin-bottom: 25px;
+    text-align: left;
+    max-width: 750px; 
+    
+    /* Allinea il contenitore a sinistra (margin-right: auto spinge lo spazio a destra) */
+    margin-left: 0;
+    margin-right: auto;
+    
+    margin-top: 50px;
+    margin-bottom: 80px;
+}
+
+/* TITOLO ARANCIONE */
+.grid-title h2 {
+    font-family: var(--font-title);
+    color: var(--terziario); /* L'arancione del periodo antico */
+    font-size: 2rem;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 100px;
+}
+
+/* GRIGLIA PRODOTTI */
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 colonne */
+    gap: 30px;
+}
+
+/* CARD ORIZZONTALE */
+.product-card {
+    display: flex; /* Disposizione orizzontale immagine | testo */
+    background-color: var(--primario);
+    border-radius: 20px;
+    overflow: hidden;
+    height: 180px; /* Altezza fissa per simmetria */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.product-image {
+    flex: 0 0 40%; /* L'immagine occupa il 40% della larghezza */
+}
+
+.product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.product-info {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.product-info h3 {
+    font-family: var(--font-title);
+    color: var(--terziario);
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+}
+
+.product-info p {
+    font-family: var(--font-base);
+    font-size: 0.85rem;
+    color: var(--text);
+    line-height: 1.3;
+}
+
+/* BOTTONE VAI (Coerenza con card precedenti) */
+.btn-vai {
+    background-color: var(--terziario);
+    color: var(--quinto);
+    text-decoration: none;
+    font-family: var(--font-title);
+    font-weight: 700;
+    padding: 6px 30px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    align-self: flex-end; /* Allineato a destra in basso */
+}
